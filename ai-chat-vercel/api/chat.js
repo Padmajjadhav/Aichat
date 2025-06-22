@@ -1,8 +1,14 @@
 export default async function handler(req, res) {
-  const { provider, prompt } = req.body;
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Methods", "GET,POST,OPTIONS");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type,Authorization");
 
-  const OPENAI_KEY = process.env.OPENAI_KEY;
-  const GOOGLE_KEY = process.env.GOOGLE_KEY;
+  if (req.method === "OPTIONS") {
+    return res.status(204).end();
+  }
+
+  // ... rest of your POST logic here
+}
 
   try {
     let response;
