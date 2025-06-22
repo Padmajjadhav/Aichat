@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Chat Client</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="chat-container">
+    <h2>Talk to AI 🤖</h2>
+
+    <div class="toggle-area">
+      <label class="switch">
+        <input type="checkbox" id="aiToggle" onchange="toggleAIProvider()" />
+        <span class="slider"></span>
+      </label>
+      <span id="provider-label">OpenAI</span>
+    </div>
+
+    <div id="chat-box" class="chat-box"></div>
+
+    <div class="input-area">
+      <input type="text" id="user-input" placeholder="Type a message..." />
+      <button onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
